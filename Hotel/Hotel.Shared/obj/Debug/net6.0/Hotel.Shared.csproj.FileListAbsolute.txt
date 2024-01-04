@@ -1,0 +1,11 @@
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.deps.json
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.dll
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.pdb
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.AssemblyInfoInputs.cache
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.AssemblyInfo.cs
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.csproj.CoreCompileInputs.cache
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.dll
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\refint\Hotel.Shared.dll
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.pdb
+C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\ref\Hotel.Shared.dll

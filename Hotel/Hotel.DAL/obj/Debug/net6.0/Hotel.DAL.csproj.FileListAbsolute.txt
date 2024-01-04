@@ -1,0 +1,17 @@
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.DAL.deps.json
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.DAL.runtimeconfig.json
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.DAL.dll
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.DAL.pdb
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.Shared.dll
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\bin\Debug\net6.0\Hotel.Shared.pdb
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.csproj.AssemblyReference.cache
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.AssemblyInfoInputs.cache
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.AssemblyInfo.cs
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.csproj.CoreCompileInputs.cache
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.csproj.CopyComplete
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.dll
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\refint\Hotel.DAL.dll
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.pdb
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\Hotel.DAL.genruntimeconfig.cache
+C:\.NET\lab3-misha\Hotel\Hotel.DAL\obj\Debug\net6.0\ref\Hotel.DAL.dll
