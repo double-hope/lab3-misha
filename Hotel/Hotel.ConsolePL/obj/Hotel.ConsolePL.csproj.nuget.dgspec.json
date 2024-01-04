@@ -1,20 +1,270 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NET\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj": {}
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj": {}
   },
   "projects": {
-    "C:\\.NET\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj": {
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\Hotel.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj",
-        "projectName": "Hotel.ConsolePL",
-        "projectPath": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj",
-        "packagesPath": "C:\\Users\\napro\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.ConsolePL\\obj\\",
+        "projectUniqueName": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\Hotel.BLL.csproj",
+        "projectName": "Hotel.BLL",
+        "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\Hotel.BLL.csproj",
+        "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
+        "outputPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\napro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj": {
+                "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj",
+        "projectName": "Hotel.ConsolePL",
+        "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.ConsolePL\\Hotel.ConsolePL.csproj",
+        "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
+        "outputPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.ConsolePL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\Hotel.BLL.csproj": {
+                "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.BLL\\Hotel.BLL.csproj"
+              },
+              "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj": {
+                "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj",
+        "projectName": "Hotel.DAL",
+        "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\Hotel.DAL.csproj",
+        "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
+        "outputPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {
+                "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
+        "projectName": "Hotel.Shared",
+        "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
+        "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
+        "outputPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +305,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
