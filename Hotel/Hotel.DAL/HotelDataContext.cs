@@ -65,7 +65,9 @@ namespace Hotel.DAL
                     .AddJsonFile("appsettings.json")
                     .Build();
 
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder
+                .UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                .UseLazyLoadingProxies();
         }
     }
 }

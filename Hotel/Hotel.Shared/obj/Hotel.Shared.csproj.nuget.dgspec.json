@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NET\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {}
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {}
   },
   "projects": {
-    "C:\\.NET\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {
+    "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
+        "projectUniqueName": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
         "projectName": "Hotel.Shared",
-        "projectPath": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
-        "packagesPath": "C:\\Users\\napro\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\lab3-misha\\Hotel\\Hotel.Shared\\obj\\",
+        "projectPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\Hotel.Shared.csproj",
+        "packagesPath": "C:\\Users\\nadia\\.nuget\\packages\\",
+        "outputPath": "D:\\KPI\\4_year\\7_semester\\.NET\\Misha\\lab3-misha\\Hotel\\Hotel.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\napro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nadia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

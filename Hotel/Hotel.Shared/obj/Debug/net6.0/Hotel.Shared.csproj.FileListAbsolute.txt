@@ -9,3 +9,15 @@ C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.dll
 C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\refint\Hotel.Shared.dll
 C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.pdb
 C:\.NET\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\ref\Hotel.Shared.dll
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.deps.json
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.dll
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\bin\Debug\net6.0\Hotel.Shared.pdb
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.AssemblyInfoInputs.cache
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.AssemblyInfo.cs
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.csproj.CoreCompileInputs.cache
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.sourcelink.json
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.dll
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\refint\Hotel.Shared.dll
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\Hotel.Shared.pdb
+D:\KPI\4_year\7_semester\.NET\Misha\lab3-misha\Hotel\Hotel.Shared\obj\Debug\net6.0\ref\Hotel.Shared.dll

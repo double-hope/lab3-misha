@@ -8,7 +8,7 @@
         public virtual RoomCategory Category { get; set; }
         public decimal PricePerNight { get; set; }
 
-        public ICollection<Reservation> Reservations { get; set; }
-        public ICollection<RoomRental> RoomRentals { get; set; }
+        public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<RoomRental> RoomRentals { get; set; }
     }
 }
