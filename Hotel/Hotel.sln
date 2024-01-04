@@ -5,6 +5,12 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.DAL", "Hotel.DAL\Hotel.DAL.csproj", "{F3A072C9-2058-40FB-9096-15C1B11A67CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.BLL", "Hotel.BLL\Hotel.BLL.csproj", "{D79CA91A-9E06-48CE-86A4-91356EEE25E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.ConsolePL", "Hotel.ConsolePL\Hotel.ConsolePL.csproj", "{5CCC567F-ADE8-444F-B7EA-071AEAC8BDBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Shared", "Hotel.Shared\Hotel.Shared.csproj", "{C7E8B79E-6FF5-4647-A433-74C99D0A2FF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{F3A072C9-2058-40FB-9096-15C1B11A67CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3A072C9-2058-40FB-9096-15C1B11A67CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3A072C9-2058-40FB-9096-15C1B11A67CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79CA91A-9E06-48CE-86A4-91356EEE25E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79CA91A-9E06-48CE-86A4-91356EEE25E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79CA91A-9E06-48CE-86A4-91356EEE25E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79CA91A-9E06-48CE-86A4-91356EEE25E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CCC567F-ADE8-444F-B7EA-071AEAC8BDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CCC567F-ADE8-444F-B7EA-071AEAC8BDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CCC567F-ADE8-444F-B7EA-071AEAC8BDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CCC567F-ADE8-444F-B7EA-071AEAC8BDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E8B79E-6FF5-4647-A433-74C99D0A2FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E8B79E-6FF5-4647-A433-74C99D0A2FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E8B79E-6FF5-4647-A433-74C99D0A2FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E8B79E-6FF5-4647-A433-74C99D0A2FF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
