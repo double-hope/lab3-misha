@@ -12,7 +12,6 @@ namespace Hotel.DAL
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomCategory> RoomCategories { get; set; }
-        public DbSet<RoomRental> RoomRentals { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,9 +29,6 @@ namespace Hotel.DAL
             modelBuilder.Entity<Reservation>()
                 .HasKey(r => r.Id);
 
-            modelBuilder.Entity<RoomRental>()
-                .HasKey(rr => rr.Id);
-
             modelBuilder.Entity<Room>()
                .HasOne(r => r.Category)
                .WithMany()
@@ -49,12 +45,6 @@ namespace Hotel.DAL
                 .HasOne(r => r.Room)
                 .WithMany(r => r.Reservations)
                 .HasForeignKey(r => r.RoomId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<RoomRental>()
-                .HasOne(rr => rr.Room)
-                .WithMany(r => r.RoomRentals)
-                .HasForeignKey(rr => rr.RoomId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

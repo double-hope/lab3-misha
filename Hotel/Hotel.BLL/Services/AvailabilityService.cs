@@ -2,6 +2,7 @@
 using Hotel.BLL.Dtos.Room;
 using Hotel.BLL.Interfaces;
 using Hotel.DAL.Interfaces;
+using Hotel.Shared.Enums;
 
 namespace Hotel.BLL.Services
 {
@@ -25,9 +26,9 @@ namespace Hotel.BLL.Services
         {
             var reservations = await _unitOfWork.ReservationRepository
                 .GetAllAsync(r =>
-                    (startDate >= r.StartDate && startDate <= r.EndDate) ||
-                    (endDate >= r.StartDate && endDate <= r.EndDate) ||
-                    (startDate <= r.StartDate && endDate >= r.EndDate));
+                    (startDate >= r.StartDate && startDate <= r.EndDate && r.Status == ReservationStatus.Active) ||
+                    (endDate >= r.StartDate && endDate <= r.EndDate && r.Status == ReservationStatus.Active) ||
+                    (startDate <= r.StartDate && endDate >= r.EndDate && r.Status == ReservationStatus.Active));
 
             return reservations.Select(r => r.RoomId).ToList();
         }

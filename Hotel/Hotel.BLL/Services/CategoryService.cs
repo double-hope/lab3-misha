@@ -17,14 +17,9 @@ namespace Hotel.BLL.Services
 			return categories;
 		}
 
-		public async Task<RoomCategory> CreateCategory(string categoryName, float priceCoefficient)
+		public async Task<RoomCategory> CreateCategory(CreateCategoryDto categoryDto)
 		{
-			var category = new RoomCategory
-			{
-				Id = Guid.NewGuid(),
-				Name = categoryName,
-				PriceCoefficient = priceCoefficient
-			};
+			var category = _mapper.Map<RoomCategory>(categoryDto);
 
 			await _unitOfWork.RoomCategoryRepository.AddAsync(category);
 			await _unitOfWork.SaveAsync();
