@@ -8,6 +8,9 @@ using Hotel.DAL.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using Hotel.BLL.Mappers;
+using Hotel.BLL.Dtos.Reservation;
+using Hotel.BLL.Dtos.Room;
+using Hotel.BLL.Dtos.Category;
 
 namespace Hotel.ConsolePL
 {
@@ -25,6 +28,7 @@ namespace Hotel.ConsolePL
                             new ClientMappingProfile(),
                             new RoomMappingProfile(),
                             new CategoryMappingProfile(),
+                            new ReservationMappingProfile(),
                         });
                 })
                 .AddDbContext<HotelDataContext>()
@@ -274,9 +278,17 @@ namespace Hotel.ConsolePL
                     return;
                 }
 
+                var createReservationDto = new CreateReservationDto
+                {
+                    ClientEmail = clientEmail,
+                    RoomId = roomId,
+                    StartDate = startDate,
+                    EndDate = endDate
+                };
+
                 try
                 {
-                    var booked = await bookingService.BookRoom(clientEmail, roomId, startDate, endDate);
+                    var booked = await bookingService.BookRoom(createReservationDto);
 
                     if (booked)
                     {
@@ -319,6 +331,13 @@ namespace Hotel.ConsolePL
                     return;
                 }
 
+                var createRoomDto = new CreateRoomDto
+                {
+                    RoomNumber = roomNumber,
+                    CategoryId = categoryId,
+                    PricePerNight = pricePerNight
+                };
+
                 try
                 {
                     var categoryExists = await categoryService.GetAllCategories();
@@ -328,7 +347,7 @@ namespace Hotel.ConsolePL
                         return;
                     }
 
-                    var roomId = await roomService.CreateRoom(roomNumber, categoryId, pricePerNight);
+                    var roomId = await roomService.CreateRoom(createRoomDto);
 
                     Console.WriteLine($"Room created successfully. Room Id: {roomId}");
                 }
@@ -359,9 +378,15 @@ namespace Hotel.ConsolePL
                     return;
                 }
 
+                var createCategoryDto = new CreateCategoryDto
+                {
+                    Name = categoryName,
+                    PriceCoefficient = categoryPriceCoefficient
+                };
+
                 try
                 {
-                    var categoryId = await categoryService.CreateCategory(categoryName, categoryPriceCoefficient);
+                    var categoryId = await categoryService.CreateCategory(createCategoryDto);
 
                     Console.WriteLine($"Category created successfully. Category Id: {categoryId}");
                 }
