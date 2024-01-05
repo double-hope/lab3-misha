@@ -9,6 +9,5 @@
         public decimal PricePerNight { get; set; }
 
         public virtual ICollection<Reservation> Reservations { get; set; }
-        public virtual ICollection<RoomRental> RoomRentals { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Hotel.BLL.Dtos.Reservation;
 using Hotel.BLL.Interfaces;
 using Hotel.DAL.Entities;
 using Hotel.DAL.Interfaces;
@@ -10,15 +11,22 @@ namespace Hotel.BLL.Services
     {
         public BookingService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-        public async Task<bool> BookRoom(Guid clientId, Guid roomId, DateTime startDate, DateTime endDate)
+        public async Task<bool> BookRoom(string clientEmail, Guid roomId, DateTime startDate, DateTime endDate)
         {
+            var client = await _unitOfWork.ClientRepository.FirstOrDefaultAsync(c => c.Email.Equals(clientEmail));
+
+            if(client == null)
+            {
+                throw new KeyNotFoundException("User with this email does not found");
+            }
+
             var isRoomAvailable = await IsRoomAvailable(roomId, startDate, endDate);
 
             if (isRoomAvailable)
             {
                 var reservation = new Reservation
                 {
-                    ClientId = clientId,
+                    ClientId = client.Id,
                     RoomId = roomId,
                     StartDate = startDate,
                     EndDate = endDate,
@@ -35,14 +43,74 @@ namespace Hotel.BLL.Services
             return false;
         }
 
+        public async Task<bool> CancelBooking(Guid reservationId)
+        {
+            var reservation = await _unitOfWork.ReservationRepository.FirstOrDefaultAsync(r => r.Id.Equals(reservationId));
+
+            if (reservation == null)
+            {
+                throw new KeyNotFoundException("Reservation with this id does not found");
+            }
+
+            if (reservation.Status == ReservationStatus.Canceled || reservation.Status == ReservationStatus.Completed)
+            {
+                return false;
+            }
+
+            reservation.Status = ReservationStatus.Canceled;
+            _unitOfWork.ReservationRepository.Update(reservation);
+            await _unitOfWork.SaveAsync();
+
+            return true;
+        }
+
+        public async Task<CompleteReservationDto> CompleteBooking(Guid reservationId)
+        {
+            var reservation = await _unitOfWork.ReservationRepository.FirstOrDefaultAsync(r => r.Id.Equals(reservationId));
+
+            if (reservation == null)
+            {
+                throw new KeyNotFoundException("Reservation with this id does not found");
+            }
+
+            if (reservation.Status == ReservationStatus.Canceled || reservation.Status == ReservationStatus.Completed)
+            {
+                throw new InvalidOperationException("You cannot complete already cancelled or completed reservation");
+            }
+
+            var room = await _unitOfWork.RoomRepository.FirstOrDefaultAsync(r => r.Id.Equals(reservation.RoomId));
+            var category = await _unitOfWork.RoomCategoryRepository.FirstOrDefaultAsync(r => r.Id.Equals(room.CategoryId));
+
+            var completeReservationDto = new CompleteReservationDto()
+            {
+                AmountOfMoney = room.PricePerNight * (decimal)category.PriceCoefficient,
+            };
+
+            reservation.Status = ReservationStatus.Completed;
+            _unitOfWork.ReservationRepository.Update(reservation);
+
+            await _unitOfWork.SaveAsync();
+
+            return completeReservationDto;
+        }
+
+
         private async Task<bool> IsRoomAvailable(Guid roomId, DateTime startDate, DateTime endDate)
         {
+
+            var room = await _unitOfWork.RoomRepository.FirstOrDefaultAsync(r => r.Id.Equals(roomId));
+
+            if(room == null)
+            {
+                throw new KeyNotFoundException("Room with this id does not found");
+            }
+
             var reservations = await _unitOfWork.ReservationRepository
             .GetAllAsync(r =>
-                r.RoomId == roomId &&
-                ((startDate >= r.StartDate && startDate <= r.EndDate) ||
-                 (endDate >= r.StartDate && endDate <= r.EndDate) ||
-                 (startDate <= r.StartDate && endDate >= r.EndDate)));
+                r.RoomId == room.Id &&
+                ((startDate >= r.StartDate && startDate <= r.EndDate && r.Status == ReservationStatus.Active) ||
+                 (endDate >= r.StartDate && endDate <= r.EndDate && r.Status == ReservationStatus.Active) ||
+                 (startDate <= r.StartDate && endDate >= r.EndDate && r.Status == ReservationStatus.Active)));
 
             return !reservations.Any();
         }

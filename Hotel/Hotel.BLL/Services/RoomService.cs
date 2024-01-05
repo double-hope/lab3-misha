@@ -12,6 +12,14 @@ namespace Hotel.BLL.Services
 
 		public async Task<RoomDto> CreateRoom(string roomNumber, Guid categoryId, decimal pricePerNight)
 		{
+
+			var category = await _unitOfWork.RoomCategoryRepository.FirstOrDefaultAsync(c => c.Id == categoryId);
+
+			if(category == null)
+			{
+				throw new KeyNotFoundException("Category was not found");
+			}
+
 			var room = new Room
 			{
 				Id = Guid.NewGuid(),

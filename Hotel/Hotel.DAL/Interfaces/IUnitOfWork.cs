@@ -8,7 +8,6 @@ namespace Hotel.DAL.Interfaces
         IRepository<Reservation> ReservationRepository { get; }
         IRepository<Room> RoomRepository { get; }
         IRepository<RoomCategory> RoomCategoryRepository { get; }
-        IRepository<RoomRental> RoomRentalRepository { get; }
         Task SaveAsync();
     }
 }

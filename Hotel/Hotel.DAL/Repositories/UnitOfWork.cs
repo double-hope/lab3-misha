@@ -11,7 +11,6 @@ namespace Hotel.DAL.Repositories
         private IRepository<Reservation> reservationRepository;
         private IRepository<Room> roomRepository;
         private IRepository<RoomCategory> roomCategoryRepository;
-        private IRepository<RoomRental> roomRentalRepository;
         public UnitOfWork(HotelDataContext context)
         {
             _context = context;
@@ -61,18 +60,6 @@ namespace Hotel.DAL.Repositories
                     roomCategoryRepository = new Repository<RoomCategory>(_context);
                 }
                 return roomCategoryRepository;
-            }
-        }
-
-        public IRepository<RoomRental> RoomRentalRepository
-        {
-            get
-            {
-                if (roomRentalRepository == null)
-                {
-                    roomRentalRepository = new Repository<RoomRental>(_context);
-                }
-                return roomRentalRepository;
             }
         }
 
