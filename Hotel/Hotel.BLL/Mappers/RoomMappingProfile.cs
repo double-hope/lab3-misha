@@ -9,6 +9,7 @@ namespace Hotel.BLL.Mappers
 		public RoomMappingProfile()
 		{
 			CreateMap<Room, RoomDto>();
-		}
+			CreateMap<CreateRoomDto, Room>();
+        }
 	}
 }

@@ -11,27 +11,22 @@ namespace Hotel.BLL.Services
     {
         public BookingService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-        public async Task<bool> BookRoom(string clientEmail, Guid roomId, DateTime startDate, DateTime endDate)
+        public async Task<bool> BookRoom(CreateReservationDto reservationDto)
         {
-            var client = await _unitOfWork.ClientRepository.FirstOrDefaultAsync(c => c.Email.Equals(clientEmail));
+            var client = await _unitOfWork.ClientRepository.FirstOrDefaultAsync(c => c.Email.Equals(reservationDto.ClientEmail));
 
             if(client == null)
             {
                 throw new KeyNotFoundException("User with this email does not found");
             }
 
-            var isRoomAvailable = await IsRoomAvailable(roomId, startDate, endDate);
+            var isRoomAvailable = await IsRoomAvailable(reservationDto.RoomId, reservationDto.StartDate, reservationDto.EndDate);
 
             if (isRoomAvailable)
             {
-                var reservation = new Reservation
-                {
-                    ClientId = client.Id,
-                    RoomId = roomId,
-                    StartDate = startDate,
-                    EndDate = endDate,
-                    Status = ReservationStatus.Active
-                };
+                var reservation = _mapper.Map<Reservation>(reservationDto);
+                reservation.ClientId = client.Id;
+                reservation.Status = ReservationStatus.Active;
                 
                 await _unitOfWork.ReservationRepository.AddAsync(reservation);
 

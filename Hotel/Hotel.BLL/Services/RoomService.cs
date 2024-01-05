@@ -10,23 +10,17 @@ namespace Hotel.BLL.Services
 	{
 		public RoomService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-		public async Task<RoomDto> CreateRoom(string roomNumber, Guid categoryId, decimal pricePerNight)
+		public async Task<RoomDto> CreateRoom(CreateRoomDto roomDto)
 		{
 
-			var category = await _unitOfWork.RoomCategoryRepository.FirstOrDefaultAsync(c => c.Id == categoryId);
+			var category = await _unitOfWork.RoomCategoryRepository.FirstOrDefaultAsync(c => c.Id == roomDto.CategoryId);
 
 			if(category == null)
 			{
 				throw new KeyNotFoundException("Category was not found");
 			}
 
-			var room = new Room
-			{
-				Id = Guid.NewGuid(),
-				RoomNumber = roomNumber,
-				CategoryId = categoryId,
-				PricePerNight = pricePerNight
-			};
+			var room = _mapper.Map<Room>(roomDto);
 
 			await _unitOfWork.RoomRepository.AddAsync(room);
 			await _unitOfWork.SaveAsync();
