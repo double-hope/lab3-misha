@@ -47,9 +47,14 @@ namespace Hotel.BLL.Services
                 throw new KeyNotFoundException("Reservation with this id does not found");
             }
 
-            if (reservation.Status == ReservationStatus.Canceled || reservation.Status == ReservationStatus.Completed)
+            if (reservation.Status == ReservationStatus.Canceled)
             {
-                return false;
+                throw new InvalidOperationException("You cannot cancel already cancelled reservation");
+            }
+
+            if (reservation.Status == ReservationStatus.Completed)
+            {
+                throw new InvalidOperationException("You cannot cancel completed reservation");
             }
 
             reservation.Status = ReservationStatus.Canceled;
@@ -68,9 +73,14 @@ namespace Hotel.BLL.Services
                 throw new KeyNotFoundException("Reservation with this id does not found");
             }
 
-            if (reservation.Status == ReservationStatus.Canceled || reservation.Status == ReservationStatus.Completed)
+            if (reservation.Status == ReservationStatus.Canceled)
             {
-                throw new InvalidOperationException("You cannot complete already cancelled or completed reservation");
+                throw new InvalidOperationException("You cannot cancel already cancelled reservation");
+            }
+
+            if (reservation.Status == ReservationStatus.Completed)
+            {
+                throw new InvalidOperationException("You cannot cancel completed reservation");
             }
 
             var room = await _unitOfWork.RoomRepository.FirstOrDefaultAsync(r => r.Id.Equals(reservation.RoomId));
